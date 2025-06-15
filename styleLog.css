@@ -1,0 +1,166 @@
+/* styleLog.css */
+
+/* Import the font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* Global Styles */
+
+body {
+    /* Reset default browser styles */
+    margin: 0;
+    padding: 0;
+
+    /* Set font family and background color */
+    font-family: "Anton", sans-serif;
+    background-color: #01142e;
+    color: #fff;
+    min-height: 100vh;
+
+    /* Set display to flex and direction to column */
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    /* Reset default browser styles */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    /* Set font weight to 200 */
+    font-weight: 200;
+}
+
+/* Container Styles */
+
+.container {
+    /* Set background color and padding */
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+
+    /* Set border radius and box shadow */
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+    /* Set width and max width */
+    width: 100%;
+    max-width: 400px;
+
+    /* Set backdrop filter to blur the background */
+    backdrop-filter: blur(10px);
+}
+
+/* Form Styles */
+
+form {
+    /* Set display to flex and direction to column */
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    /* Set margin bottom and font weight */
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+.form-control {
+    /* Set padding and margin bottom */
+    padding: 12px 14px;
+    margin-bottom: 18px;
+
+    /* Set border and border radius */
+    border: 1px solid #ff6f61;
+    border-radius: 8px;
+
+    /* Set background color and color */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+
+    /* Set font size and transition */
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    /* Set outline to none */
+    outline: none;
+
+    /* Set border color and box shadow */
+    border-color: #ff6f61;
+    box-shadow: 0 0 8px #ff6f6155;
+
+    /* Set background color */
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+input[type="submit"] {
+    /* Set background color and color */
+    background-color: #ff6f61;
+    color: #fff;
+
+    /* Set padding and border */
+    padding: 12px;
+    border: none;
+
+    /* Set border radius and font size */
+    border-radius: 8px;
+    font-size: 16px;
+
+    /* Set font weight and cursor */
+    font-weight: bold;
+    cursor: pointer;
+
+    /* Set transition */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    /* Set background color and transform */
+    background-color: #ff5a4d;
+    transform: translateY(-1px);
+}
+
+button {
+    /* Set margin top and background color */
+    margin-top: 16px;
+    background-color: transparent;
+
+    /* Set color and border */
+    color: #ff6f61;
+    border: 1px solid #ff6f61;
+
+    /* Set padding and border radius */
+    padding: 10px 14px;
+    border-radius: 8px;
+
+    /* Set font weight and font size */
+    font-weight: bold;
+    font-size: 14px;
+
+    /* Set cursor and transition */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    /* Set background color and color */
+    background-color: #ff6f61;
+    color: #01142e;
+}
+
+.wrapper {
+    /* Set flex to 1 and display to flex */
+    flex: 1;
+    display: flex;
+
+    /* Set justify content and align items */
+    justify-content: center;
+    align-items: center;
+
+    /* Set width to 100% */
+    width: 100%;
+}

@@ -1,0 +1,108 @@
+/* 
+  NAVBAR Styles 
+  This section contains styles for the top navigation bar, including the layout, 
+  colors, and responsive design for smaller screens.
+*/
+
+/* Topbar styles */
+.topbar {
+    /* Use flexbox for layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #042450;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+/* Site name styles */
+.sitename {
+    /* Set font size and weight */
+    font-size: 1.5rem;
+    font-weight: 350;
+    color: #ffffff;
+}
+
+/* Navigation styles */
+.navigation {
+    /* Use flexbox for layout */
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Navigation link styles */
+.nav-link {
+    /* Remove text decoration and set color */
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+/* Navigation link underline effect */
+.nav-link::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #ff6b6b;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Hover effect for navigation links */
+.nav-link:hover {
+    color: #ff6b6b;
+}
+
+/* Expand underline on hover */
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Burger menu styles */
+.burger {
+  /* Hide by default, shown in responsive */
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 780px) {
+  .burger {
+    /* Show burger menu on small screens */
+    display: block;
+  }
+
+  .navigation {
+    /* Hide navigation by default on small screens */
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #042450;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem 2rem;
+  }
+
+  /* Show navigation when active */
+  .navigation.active {
+    display: flex;
+  }
+}
+

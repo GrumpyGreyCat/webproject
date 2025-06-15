@@ -1,0 +1,181 @@
+/* styleInside.css
+
+This file contains the CSS styles for the inside page of the music player.
+It includes styles for the tracks, data and list sections, buttons and music controls.
+*/
+
+/* Global styles */
+
+* {
+    /* Reset all element margins and padding */
+    margin: 0;
+    padding: 0;
+    /* Enable box sizing */
+    box-sizing: border-box;
+}
+
+body {
+    /* Set the font family and background color */
+    font-family: "Anton", sans-serif;
+    background-color: #01142e;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+h2 {
+    /* Set the font weight for headings */
+    font-weight: 200;
+}
+
+/* Track styles */
+
+.track {
+    /* Set the track styles */
+    flex: 0 0 auto;
+    width: 40rem;
+    height: 9rem;
+    background-color: #042450;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.track:hover {
+    /* Set the hover effect for tracks */
+    transform: scale(1.03);
+}
+
+/* Data and list styles */
+
+.data,
+.list {
+    /* Set the data and list styles */
+    width: 90%;
+    height: auto;
+    background-color: #042450;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+    margin: 2rem auto;
+    color: white;
+}
+
+.data,
+.list {
+    /* Set the text alignment and justification */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.data,
+.list {
+    /* Set the font size */
+    font-size: 2.5rem;
+}
+
+.data,
+.list {
+    /* Set the margin top and font size */
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.data,
+.list,
+p {
+    /* Set the max width and margin */
+    max-width: 90%;
+    margin: 2rem auto 0;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+/* Button styles */
+
+button {
+    /* Set the button styles */
+    margin-top: 16px;
+    background-color: transparent;
+    color: #ff6f61;
+    border: 1px solid #ff6f61;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    /* Set the hover effect for buttons */
+    background-color: #ff6f61;
+    color: #01142e;
+}
+
+/* Wrapper styles */
+
+.wrapper{
+    /* Set the padding bottom for the wrapper */
+    padding-bottom: 12%;
+}
+
+/* Music controls styles */
+
+#music-controls {
+    /* Set the music controls styles */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #042450;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 999;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    font-family: sans-serif;
+}
+
+#music-controls #current-song-title {
+    /* Set the current song title styles */
+    flex: 1;
+    font-weight: bold;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#music-controls .controls {
+    /* Set the controls styles */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#music-controls button {
+    /* Set the button styles for music controls */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#music-controls input[type="range"] {
+    /* Set the range input styles for music controls */
+    width: 100px;
+}
