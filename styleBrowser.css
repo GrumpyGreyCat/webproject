@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Anton", sans-serif;
+  background-color: #01142e;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 200;
+}
+
+
+/* GAME SECTION */
+
+.game-section {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem;
+  flex-wrap: nowrap;
+}
+
+.title-card {
+  flex: 0 0 auto;
+  width: 180px;
+  background-color: #042450;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.title-card h2 {
+  font-weight: 500;
+}
+
+/* SCROLLING SONG NAME */
+.game-name-div {
+  flex: 0 0 auto;
+  width: 40%;
+  height: 2.5rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #0b3878;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.game-name-div::-webkit-scrollbar {
+  height: 0px;
+}
+
+.game-name-div h3 {
+  font-weight: normal;
+}
+
+
+.song-name-div {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 2.5rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #0b3878;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.song-name-div::-webkit-scrollbar {
+  height: 0px;
+}
+
+.song-name-div h3 {
+  font-weight: normal;
+}
+
+
+
+/* AUDIO CARDS */
+
+.audio-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.audio-card {
+  flex: 0 0 auto;
+  width: 70%;
+  height: 12rem;
+  background-color: #042450;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.audio-card:hover {
+  transform: scale(1.03);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  padding-top: 5px;
+}
+
+button,
+input[type="submit"] {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #c52e2e;
+}
+
+
+.time-display {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.progress {
+  height: 6px;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff6b6b, #ec1717);
+  transition: width 0.2s linear;
+}
+
+.hidden-audio {
+  display: none;
+}
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .welcome-card {
+    width: 95%;
+    padding: 2rem 1rem;
+  }
+
+  .game-section {
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .audio-card {
+    width: 100%;
+  }
+
+  .title-card {
+    width: 140px;
+  }
+
+  .song-name-div {
+    width: 140px;
+    padding: 0.5rem;
+  }
+}
+
+.name-div {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  gap: 8px;
+}
+
+#search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
+  margin-top: 3%;
+}
+
+input[type="search"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="search"]:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+}
+
+input[type="search"]::placeholder {
+  color: #999;
+}
+
+.search-results {
+  margin-top: 2%;
+  display: flex;
+  width:60%;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.playlist-picker {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #042450;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+    z-index: 1001;
+}
+
+.playlist-picker.show {
+    transform: translateY(0%);
+}
+
+.hidden {
+    display: none;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    opacity: 1;
+    bottom: 40px;
+    pointer-events: auto;
+}
+
+
+#playlist-list button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  gap: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#playlist-list{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+#close-picker 
+{
+  margin-left: 43%;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  width: 5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  gap: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}

@@ -1,0 +1,269 @@
+  /*
+   * Import the font from Google Fonts
+   */
+  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+  /*
+   * Global styles
+   */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Anton", sans-serif;
+    background-color: #01142e;
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-weight: 200;
+    text-align: center;
+  }
+
+  /*
+   * Welcome card
+   */
+  .welcome-card {
+    width: 90%;
+    margin: 2rem auto;
+    background-color: #042450;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: grid;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .welcome-card p {
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 0.95rem;
+  }
+
+  /*
+   * Game section
+   */
+  .app-container h1 {
+    margin-left: 2rem;
+  }
+
+  .game-section {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .title-card {
+    flex: 0 0 auto;
+    width: 12.5rem;
+    background-color: #042450;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    scroll-snap-align: start;
+  }
+
+  .slideshow{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  /*
+   * Song & Game name cards
+   */
+  .song-name-div {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 2.5rem;
+    white-space: nowrap;
+    overflow-x: auto;
+    background-color: #0b3878;
+    border-radius: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    font-weight: 400;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .song-name-div::-webkit-scrollbar {
+    height: 0;
+  }
+
+  .carousel-arrow {
+    height: 8.5rem;
+  }
+
+  /*
+   * Audio card section
+   */
+  .audio-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .audio-card {
+    flex: 1 1 calc(20% - 1rem);
+    min-width: 200px;
+    max-width: 250px;
+    background-color: #042450;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .audio-card:hover {
+    transform: scale(1.03);
+  }
+
+  /*
+   * Controls
+   */
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    padding-top: 5px;
+  }
+
+  button,
+  input[type="submit"] {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: #c52e2e;
+  }
+
+  .time-display {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+
+  /*
+   * Progress bar
+   */
+  .progress {
+    height: 6px;
+    background-color: #333;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff6b6b, #ec1717);
+    transition: width 0.2s linear;
+  }
+
+  .progress-cursor {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border: 2px solid red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hidden-audio {
+    display: none;
+  }
+
+  /*
+   * Slideshow
+   */
+  .slideshow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+  }
+
+.show-more-easter-eggs {
+  justify-content: center;
+  align-items: center;
+  margin-left: 43%;
+  margin-bottom: 2rem;
+}
+
+  /*
+   * Login/Register
+   */
+  .login-container,
+  .register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+  }
+
+  /*
+   * Responsive
+   */
+  @media screen and (max-width: 768px) {
+    .navigation {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .topbar {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .audio-card {
+      flex: 1 1 100%;
+    }
+
+    .song-name-div,
+    .game-name-div {
+      width: 140px;
+      padding: 0.5rem;
+    }
+
+    .welcome-card {
+      width: 95%;
+      padding: 1.5rem 1rem;
+    }
+  }
+
+  .volume-slider {
+    width: 80%;
+  }
+
