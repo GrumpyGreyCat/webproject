@@ -563,9 +563,7 @@ INSERT INTO `users` (`id`, `username`, `email`, `password_hash`, `role`) VALUES
 (1, 'admin', 'admin@gmail.com', '$2y$10$uneBkVDn/cyVvij6g3t2H.jjDL899JhijiADBRl68dpedKzSMjyYK', 'admin'),
 (9, 'test', 'test@test', '$2y$10$5Zl4P7XSvFa2y5ntKT2lF.ckkeTGmoZRf/.6CJHWiqg8B6s3hrMv2', NULL),
 (10, 'aaa', 'a@a', '$2y$10$kw8VD6fLI2pyXl6Y26DmzeZJku46JEW8M24Q9vOh3OwyU.zakV9mW', NULL),
-(11, 'azerty', 'azerty@azerty', '$2y$10$h1yev5g5zphmk3j24Yc1RO3tPVDVf4EME0wRtgz4oC6q/KWlj8.Im', NULL),
-(12, 'Shdo3K', 'lechevallier.florian.4@gmail.com', '$2y$10$MNutMTzkmNqFRdTs8qPYp.c47IVNThp7Dd8yQj7/vjXXZLi8//pU6', NULL),
-(13, 'MATHIAS', 'MATHIAS@hexagone', '$2y$10$VbU8QDgdlT12LL2G2Io1dOR.NtobB6Lb0/VPtw.2wx7juJcP4ml9e', NULL);
+(11, 'azerty', 'azerty@azerty', '$2y$10$h1yev5g5zphmk3j24Yc1RO3tPVDVf4EME0wRtgz4oC6q/KWlj8.Im', NULL)
 
 -- --------------------------------------------------------
 
